@@ -28,7 +28,7 @@ try {
    const data = fs.readFileSync(dataBaseFile, "utf-8")
       if(!data){
         res.status(401).json({
-            message: "Error Reading from Database"
+            message: "Error Reading from Database here"
         })
       } else{
         databaseRead = JSON.parse(data)
