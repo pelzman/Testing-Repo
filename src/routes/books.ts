@@ -13,7 +13,7 @@ const router = express.Router();
 //   res.send('respond with a resource');
 // });
 router.post('/add',auth, addBook)
-router.get("/getBook",auth, getBooks)
+router.get("/getBook", getBooks)
 // router.put('/updatebyid/:id', findById)
 router.put('/:id', findById)
 router.delete('/:title', deleteBook)

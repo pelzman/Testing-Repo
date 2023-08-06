@@ -2,7 +2,8 @@
   "name": "week-6-task-pelzman",
   "packageManager": "yarn@4.0.0-rc.44",
   "scripts": {
-    "start": "nodemon  dist/app.js",
+    "dev": "nodemon  dist/app.js",
+    "start": "node dist/app.js",
     "compile": "tsc -w",
     "build": "tsc",
     "test": "jest"

@@ -1,8 +1,6 @@
 name: Node.js CI
 
-on:
-  push:
-    branches: [ "main" ]
+on: 
   pull_request:
     branches: [ "main" ]
 
@@ -26,3 +24,16 @@ jobs:
     - run: yarn
     - run: yarn build 
     - run: yarn test
+
+ deploy:
+    name:deploy to production
+    needs:[build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
+
+
